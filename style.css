@@ -1,0 +1,160 @@
+
+/* General styling */
+body {
+    font-family: 'Press Start 2P', cursive;
+    /* Retro pixel font from Google Fonts */
+    text-align: center;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* Set body height to 100% of viewport height */
+    width: 100vw;
+    /* Set body width to 100% of viewport width */
+    overflow: hidden;
+    /* Hide overflow content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    color: #4CAF50;
+    font-family: 'JetBrains Mono', monospace;
+    /* JetBrains Mono font for instructions */
+}
+
+p {
+    font-family: 'JetBrains Mono', monospace;
+    /* JetBrains Mono font for instructions */
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+    /* Ensure buttons use the retro font */
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hidden {
+    display: none !important;
+    /* Ensure hidden overrides other display properties */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+    /* Ensure buttons use the retro font */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+#gameCanvas {
+    border: 2px solid #4CAF50;
+    display: block;
+    margin: 10px auto auto;
+    background-color: #222;
+}
+
+#scoreDisplay,
+#playerNameDisplay {
+    width: 400;
+    font-size: 18px;
+    color: #4CAF50;
+    font-family: 'Press Start 2P', cursive;
+    margin: auto auto 5px auto;
+    text-align: left;
+    /* Retro pixel font for score */
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #4CAF50;
+    background-color: #333;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    /* Retro pixel font for inputs */
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+#scoreboard,
+#howToPlay {
+    padding: 20px;
+}
+
+#pauseButton,
+#restartButton,
+#backToMenu {
+    background-color: #ff0000;
+}
+
+
+#pauseButton:hover,
+#restartButton:hover,
+#backToMenu:hover {
+    background-color: #cc0000;
+}
+
+.hidden {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    /* Remove default list bullets */
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    /* Match the font size */
+    color: #4CAF50;
+    /* Retro green color */
+    font-family: 'Press Start 2P', cursive;
+    /* Retro pixel font */
+}
+
+ul li {
+    margin-bottom: 5px;
+    /* Space between list items */
+}
