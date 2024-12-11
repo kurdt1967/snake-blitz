@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "vite": "^6.0.1"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "lil-gui": "^0.20.0"
+  }
+}
