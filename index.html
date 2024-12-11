@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <!-- Google Fonts: Press Start 2P for retro font and JetBrains Mono for better legibility in instructions -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Menu -->
+    <div id="mainMenu" class="menu">
+        <h1>Snake Game</h1>
+        <button id="playButton">Play</button>
+        <button id="howToPlayButton">How to Play</button>
+        <button id="scoreboardButton">Scoreboard</button>
+    </div>
+
+    <!-- How To Play Instructions -->
+    <div id="howToPlay" class="menu hidden">
+        <h2>How to Play</h2>
+        <p>In Manual Mode, you control the snake using the arrow keys to eat food while avoiding obstacles. The snake
+            will grow longer each time it eats food, and the game speed will increase as the level goes up. If the snake
+            crashes into the wall or its own body, the game will be over.</p>
+        <p>There is also a booster functionality, if you hold down the spacebar, the snake will go a bit faster</p>
+        <br>
+        <p>In AI Mode, the AI snake will use a pathfinding greedy algorithm to move the snake towards the food.</p>
+        <button class="backToMenuButton">Back to Menu</button>
+    </div>
+
+    <!-- Scoreboard -->
+
+    <div id="scoreboard" class="menu hidden">
+        <h2>Top Scorers</h2>
+        <ul id="topScorersList">
+            <!-- List of top scorers will be dynamically populated here -->
+        </ul>
+        <p id="topScorersMessage">No top scorers at the moment.</p>
+        <div>
+            <button class="backToMenuButton">Back to Menu</button>
+        </div>
+    </div>
+
+
+    <!-- Play Menu -->
+    <div id="playMenu" class="menu hidden">
+        <button id="manualModeButton">Manual Mode</button>
+        <button id="aiModeButton">AI Mode</button>
+        <button class="backToMenuButton">Back to Menu</button>
+    </div>
+
+    <!-- Manual Mode -->
+    <div id="manualMode" class="menu hidden">
+        <input type="text" id="playerName" placeholder="Enter your name">
+        <button id="submitNameButton">Submit</button>
+        <div id="difficultyMenu" class="menu hidden">
+            <h2>Select Difficulty</h2>
+            <button id="easyModeButton">Easy</button>
+            <button id="mediumModeButton">Medium</button>
+            <button id="hardModeButton">Hard</button>
+            <button id="extremeModeButton">Extreme</button>
+            <button class="backToMenuButton">Back to Menu</button>
+        </div>
+    </div>
+
+    <!-- Game Canvas -->
+    <div id="gameCanvasContainer" class="menu hidden">
+        <p id="playerNameDisplay"> Player: </p>
+        <div id="scoreDisplay">Score: 0 | Level: 1</div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <button id="pauseButton">Pause</button>
+        <button id="resumeButton" class="hidden">Resume</button>
+        <button id="restartButton">Restart</button>
+        <button id="backToMenu" class="backToMenuButton">Back to Menu</button>
+    </div>
+
+    <!-- GameOver Canvas -->
+    <div id="gameOverScreen" class="menu hidden">
+        <h2>Game Over</h2>
+        <p><span id="finalScoreDisplay"></span></p>
+        <button id="retryButton">Retry</button>
+        <button class="backToMenuButton">Back to Menu</button>
+    </div>
+
+    <script type="module" src="game.js"></script>
+
+</body>
+
+</html>
